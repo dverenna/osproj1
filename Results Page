@@ -1,0 +1,26 @@
+We plan to run our program multiple times to get various data points, so it will be easy to show results
+and any outliers.
+Our result section will be broken down into 4 sections:
+
+   1. Comparison of Total System Turnaround Time:
+        This section will consist of the average total system turnaround time for all four scenarios.
+        A graph (we haven't decided what kind of graph) to display the different ranges for each scenario.
+        We would be able to clearly see and highlight anything that is worth noting and is worth further investigation/attetion.
+    
+   2. Comparison of Average Process Turnaround Time:
+        This section would look similar to the first section, but instead of looking at the system,
+        we would be examining the individual process turnaround time, and how it varies for each scenario. 
+        We would also be able to create a graph and a discussion about how service time, arrival time, and memory requirements
+        affect the turnaround time of each process.
+        
+   3. Comparison of Average Process Wait Time:
+        This section would look similar to the other two sections, but it would be looking at the average process wait time.
+        We would create a graph for each of the four scenarios and interpret them accordingly.
+        
+   4. Comparison of Process Schedule Ordering:
+        Here we would depict multiple Gant charts for each scenario, depending on how many times we run each scenario.
+        A table could also be benficial depicting which process went first, its arrival time, wait time, turnaround time, seed values, and when it finishes.
+        A graph may be necessary to show/explore our findings and this section will most likely be where the bulk of our findings are.
+        This table would allow us to easily compare the four scenarios and highlight/discuss any important findings.
+        
+        
