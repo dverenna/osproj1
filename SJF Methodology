@@ -1,6 +1,8 @@
   We decided to use the shortest job first scheduling algorithm because this is the algorithm that will find the process with the shortest
 burst time and execute it, theoretically leading to a short wait time for all 40 processes. We are wary about this algorithm, but would like
 to test how efficient it actually is. This is our first pick, because turnaround time, and average system turnaround time is dependent on wait time,
-so if wait time is the smallest it can be, does that mean the turnaround time will be relatively small? Of course, this algorithm has drawbacks,
-which is the lack of account for processor speed and processor memory capacity. This could be a problem and could cause the average turnaround time
-and the wait time for each process to take longer than expected. We are thinking about working around this by creating priority's within the algorithm. 
+so if wait time is the smallest it can be, does that mean the turnaround time will be relatively small? In scenarios 1-3, the scheduler will be able to
+pick the shortest process of the 40 processes. We are hopeful that this will make for a quick waitime and an efficient turnaround time. Of course, 
+this algorithm has drawbacks, which is the lack of account for processor speed and processor memory capacity. This could be a problem and could 
+cause the average turnaround time and the wait time for each process to take longer than expected. We are thinking about working around this 
+by creating priority's within the algorithm. 
