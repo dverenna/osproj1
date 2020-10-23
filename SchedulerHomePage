@@ -1,1 +1,58 @@
+For this project we have four Processors (P1, P2, P3, and P4) and 40 processes which vary in runtime that need to be scheduled/executed.
+The project can be broken down into smaller parts, the scheduler, the processes, and the processors. The majority of the project is based on the scheduler.
+
+Scheduler:
+  We are able to pick from First-Come, First-Served scheduling, Shortest-Job scheduling, Shortest-Reamining-Time-First scheduling,
+  Round Robin scheduling, Machine Learning scheduling, and Multi Level Feedback scheduling.
+  We have decided to go with Shortest-Remaining-Time-First scheduler and the shortest-Job scheduler.
+  We are trying to make the shortest amount of wait time possible for each process that needs to be executed.
+  With a smaller wait time, we believe the turnaround time will also be smaller then the other scheduling algorithms.
+  The goal of the Scheduler is to assign processes to the ready queue which will make for the shortest turnaround time, system turnaround time, and waiting time. 
+
+Processors:
+  There are four processors, P1-P4, and there are four scenarios for the four processors.
+
+    1.
+        All four processors have the speed of 3GHZ and a memory capacity of 8GB.
+        All 40 processes are known ahead of time.
+        In this scenario, there we don't have to look into if the processor has enough memory to execute a process
+        in a single cycle.
+        We also don't need to worry about varying processor speed and which process should be prioritized over the other due to processor speed.
+      
+    2.
+        All four processors have the same speed of 3GHZ
+        P1 and P2 have a memory capacity of 2GB
+        P3 has a memory capacity of 4GB
+        P4 has a memory capacity of 8GB
+        All 40 processes are known ahead of time.
+        We need don't need to worry about varying speeds of the processors in this scenario.
+        We need to worry about if the processor has enough memory to finish the process in a single cycle.
+
+     3.
+        All four processors have the same memory capacity of 8GB
+        P1 and P2 have a speed of 2GHz
+        P3 has a speed of 3Ghz
+        P4 has a speed of 4Ghz
+        All 40 processes are known ahead of time.
+        This scenario is the opposite of scenario number 2. We don't need to worry about if the processor 
+        has enough memory per task, we need to worry about the speed of each processor and whether a process would
+        run quicker if it were to wait for a faster processor to become available.
+
+      4.
+        All four processors have the same speed of 3Ghz.
+        All four processors have the same memory capacity of 8GB.
+        All 40 processes are not known ahead of time.
+        The difference with this scenario is the processes arrive sequentially, so we are unaware of the processes that have
+        not arrived yet. In the other scenarios we are aware of all 40 processes that must be executed, in this scenario we are not.
+
+Processes:
+  There are 40 total processes that need to be scheduler and executed.
+  Each process has a service time and a memory requirement.
+  
+  Service Time:
+    Each of the 40 processes service time will be calculated randomly with a range of 10 * 10^6 cycles to 10 * 10^12 cycles, with 1 cycle increments.
+    Service times will be calculated by using the 64-bit Mersenne Twister generator with a uniform integer distribution.
+    
+   Memory Requirements:
+    Each of the 40 processes memory requirements will be calculated randomly between 1GB to 8GB, in 1GB increments.
 
