@@ -1,3 +1,74 @@
+SRT Methodology:
+  Scenarios 1-3:
+    Process:            Arrival Time:               Service Time:             Memory Requirements:      Priority:
+       P1                     0                          8                           4GB                  3
+       P2                     0                          4                           2GB                  1
+       P3                     0                          9                           5GB                  4
+       P4                     0                          5                           3GB                  2
+       
+       As an example of how the shortest remaining time scheduling algorithm works for scenarios 1-3 please look at the above
+       table. The table shows 4 processes that need to be executed by a single processor. For scenarios 1-3, the processes all arrive
+       at a time of 0.
+       
+       Scenario 1:
+         Each processor has the same speed and memory capacity, so we would not set priority to the higher memory requirements.
+         The first process to be scheduled would be P2, and it would run until completion.
+         The second process to be scheduled would be P4, and it would also run until completion.
+         The third process to be scheduled would be P1, and it would run until completion.
+         The fourth process to be scheduled would be P3, and it would run until completion.
+         
+       Scenario 2:
+          Each processor has the same speed.
+          P1 and P2 processors have a memory capacity of 2GB.
+          P3 processor has a memory capacity of 4GB.
+          P4 processor has a memory capacity of 8GB.
+          
+          We would set priority to the process with the smallest memory requirement, which would allow P2 and P4 to be scheduled
+          before the other two processes with higher memory requirements, this would allow the shortest burst time, along with the smallest
+          memory processes to be executed before the larger burst times and larger memory requirements would be executed.
+          
+        Scenario 3:
+          Each processor has the same memory capacity.
+          P1 and P2 are 2GHz.
+          P3 is 3 Ghz.
+          P4 is 4Ghz.
+          
+          This would be a similar scenario to scenario 1, since we don't need to worry about our processors running out of memory,
+          and we would want our slowest processor to execute the smallest task, the order would go as stated below:
+          
+         The first process to be scheduled would be P2, and it would run until completion.
+         The second process to be scheduled would be P4, and it would also run until completion.
+         The third process to be scheduled would be P1, and it would run until completion.
+         The fourth process to be scheduled would be P3, and it would run until completion.
+          
+  Scenario 4:
+  
+      Process:            Arrival Time:               Service Time:             Memory Requirements:    
+       P1                     0                          8                           4GB                  
+       P2                     5                          4                           2GB                  
+       P3                     8                          9                           5GB                  
+       P4                     3                          5                           3GB     
+       
+       Scenario 4 is different because each process will have a different arrival time. 
+       Each processor will have the same speed and same memory capacity.
+       The algorithm will look like this:
+       
+       P1 will be scheduled and exectued at time 0.
+       P4 will be the next to arrive, at time = 3.
+       P1's service time at time = 3 will be 5 and P4's service time will also be 5.
+       For the sake of simplicity, P1 will continue to execute until its service time is finished.
+       This will bring the algorithm to time = 8.
+       At this time, P2, P3, and P4 will be ready to be scheduled.
+       P2 is executed next until its finished because it has the lowest service time.
+       This will bring us to time = 12.
+       P3 and P4 still need to be scheduled.
+       P4 will be scheduled next, since it has the lowest service time.
+       At this point, time = 17.
+       Lastly, P3 will be scheduled until its service time has ended.
+       
+          
+
+Justification:
   We chose the shortest remaining time scheduling algorithm because of the turnaround time advatange over the other algorithms.
 If we are able to know how long each process takes, which is the case for three of the four scenarios, we are obvisouly able
 to execute the process with the shortest burst time. In the fourth scenario, it is relatively safe to assume that we will have more
