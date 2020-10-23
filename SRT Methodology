@@ -1,0 +1,9 @@
+  We chose the shortest remaining time scheduling algorithm because of the turnaround time advatange over the other algorithms.
+If we are able to know how long each process takes, which is the case for three of the four scenarios, we are obvisouly able
+to execute the process with the shortest burst time. In the fourth scenario, it is relatively safe to assume that we will have more
+than one process that will need to be scheduled at a time, and the algorithm will allow the process that has the least remaining burst time
+to be put on the ready queue. This will allow the turnaround time for the shorter processes to be lower
+and inturn it should bring down the average system turnaround time. 
+
+  One of the drawbacks of using this algorithm, at least if we don't address it, is the algorithm ignoring both processor speed
+and processor memory capacity. We are thinking of adding some sort of priority to address this issue.
