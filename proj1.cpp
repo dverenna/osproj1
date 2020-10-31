@@ -22,7 +22,6 @@ Process makeProcess(result_type seed, int counter) {
     p.memReq = numRand;
     p.burst = burst_rand;
     p.arrival = 0;
-    counter = counter + 1;
 }
 
 struct Process {
