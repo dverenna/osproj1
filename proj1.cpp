@@ -6,19 +6,16 @@
 
 
 
-void fillProcess() {
-  Process p;
-  for(int i = 1; i <= 40; i++){
+void fillProcess(Process *p, result_type seed, int counter) {
     srand((unsigned) time(0));
-    mt19937::result_type seed = time(0);
     auto burst_rand = std::bind(std::uniform_int_distribution<unsigned long long int>(10000000,10000000000000),
     mt19937(seed));
     numRand =  (rand() % 8) + 1;
-    p.ID = i;
+    p.ID = counter;
     p.memReq = numRand;
     p.burst = burst_rand;
     p.arrival = 0;
-  }
+    counter = counter + 1;
 }
 
 struct Process {
@@ -27,3 +24,4 @@ struct Process {
   unsigned long long int burst;
   unsigned long long int arrival;
 }
+
