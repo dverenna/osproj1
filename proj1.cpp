@@ -3,10 +3,17 @@
 #include <ctime.h>
 #include <stdlib.h>
 #include <random.h>
+#include <queue>
 
+void fillProcess(priority_queue<Process> readyQueue, result_type seed){
+    for (int i = 0; i < 40; i++){
+        Process temp = makeProcess(seed, i);
+        readyQueue.push(temp);
+    }
+}
 
-
-void fillProcess(Process *p, result_type seed, int counter) {
+Process makeProcess(result_type seed, int counter) {
+    Process p; 
     srand((unsigned) time(0));
     auto burst_rand = std::bind(std::uniform_int_distribution<unsigned long long int>(10000000,10000000000000),
     mt19937(seed));
