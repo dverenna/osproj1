@@ -1,0 +1,6 @@
+struct Process {
+  int ID;
+  int memReq;
+  unsigned long long int burst;
+  unsigned long long int arrival; 
+}
