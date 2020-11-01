@@ -29,6 +29,7 @@ struct Process {
   int memReq;
   unsigned long long int burst;
   unsigned long long int arrival;
+  unsigned long long int end;
 }
 
 struct Processor {
