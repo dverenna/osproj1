@@ -31,3 +31,8 @@ struct Process {
   unsigned long long int arrival;
 }
 
+struct Processor {
+    int ID;
+    int speed;
+    int memory;
+}
