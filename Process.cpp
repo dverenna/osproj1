@@ -9,9 +9,13 @@
 #include <functional>
 #include "Process.h"
 
+//The constructor for Process, first takes the inputed seed and uses it to seed the random number
+//generator that will be used to determine the memory requirements. Then the burst time rng is created,
+//and the mt19937 is seeded. The memory requirement is then generated, the id is set, the memory requirement
+//is set, the burst time is generated and set, and the arrival time is set to 0
 Process::Process(mt19937::result_type seed, int counter){
   srand((unsigned) seed);
-  auto burst_rand = std::uniform_int_distribution<unsigned long long int>(100000,100000000000);
+  auto burst_rand = std::uniform_int_distribution<unsigned long long int>(10000000,10000000000000);
   mt19937 gen(seed);
   int numRand =  (rand() % 8) + 1;
   id = counter;
@@ -42,6 +46,6 @@ void Process::setEnd(long long int newEnd){
 }
 string Process::toString() const{
   stringstream out;
-  out << "Process ID: " << id  << ",Service Time: " << burst << ", Memory Required: " << memReq << " Wait Time: " << (end-arrival) - burst << " Total Turnaround Time: " << end - arrival;
+  out << "Process ID: " << id  << " Service Time: " << burst << " Memory Required: " << memReq << " Wait Time: " << (end-arrival) - burst << " Total Turnaround Time: " << end - arrival;
   return out.str();
 }
