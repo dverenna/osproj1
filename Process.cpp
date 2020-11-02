@@ -42,6 +42,6 @@ void Process::setEnd(long long int newEnd){
 }
 string Process::toString() const{
   stringstream out;
-  out << "Process ID: " << id  << " Service Time: " << burst << " Memory Required: " << memReq << " Wait Time: " << (end-arrival) - burst << " Total Turnaround Time: " << end - arrival;
+  out << "Process ID: " << id  << ",Service Time: " << burst << ", Memory Required: " << memReq << " Wait Time: " << (end-arrival) - burst << " Total Turnaround Time: " << end - arrival;
   return out.str();
 }
