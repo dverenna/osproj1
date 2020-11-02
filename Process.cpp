@@ -25,19 +25,19 @@ int Process::getMem(){
 int Process::getID(){
   return id;
 }
-unsigned long long int Process::getBurst(){
+long long int Process::getBurst(){
   return burst;
 }
-unsigned long long int Process::getArrival(){
+long long int Process::getArrival(){
   return arrival;
 }
-unsigned long long int Process::getEnd(){
+long long int Process::getEnd(){
   return end;
 }
-void Process::setArriv(unsigned long long int arrTime){
+void Process::setArriv(long long int arrTime){
   arrival = arrTime;
 }
-void Process::setEnd(unsigned long long int newEnd){
+void Process::setEnd(long long int newEnd){
   end = newEnd;
 }
 string Process::toString() const{
