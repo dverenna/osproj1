@@ -1,14 +1,6 @@
-#include <stdio.h>
-#include <time.h>
-#include <ctime>
-#include <stdlib.h>
 #include <random>
 #include <queue>
-#include <inttypes.h>
-#include <iostream>
-#include <unistd.h>
 #include <tuple>
-#include <sys/wait.h>
 #include <vector>
 #include "Process.h"
 
